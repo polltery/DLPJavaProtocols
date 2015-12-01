@@ -1,0 +1,49 @@
+            :  Arrivals 0 activated
+            :  Arrivals 1 activated
+A       0.00: New Packet Arrival
+            : Packet A1 Arrival time:       0.00 Length 512 bytes
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:      250.00
+A       0.00: New Packet Arrival
+            : Packet A2 Arrival time:       0.00 Length 512 bytes
+A       0.00: New Packet Arrival
+            : Packet A3 Arrival time:       0.00 Length 512 bytes
+A       0.00: New Packet Arrival
+            : Packet A4 Arrival time:       0.00 Length 512 bytes
+            : Arrivals disabled
+A     109.17: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 1: Started. Delay:      250.00 Expires at:      359.17
+B     119.17: FrameArrival 
+            : Packet received by network layer
+            :  Contents: Packet A1 Arrival time:       0.00 Length 512 bytes
+            : Sending frame length 96 bits
+B     121.67: ChannelIdle
+A     131.67: FrameArrival 
+            : Timer 0:  Stopped
+            : Arrivals enabled
+A     131.67: New Packet Arrival
+            : Packet A5 Arrival time:     131.67 Length 512 bytes
+            : Arrivals disabled
+A     218.33: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 2: Started. Delay:      250.00 Expires at:      468.33
+B     228.33: FrameArrival 
+            : Packet received by network layer
+            :  Contents: Packet A2 Arrival time:       0.00 Length 512 bytes
+            : Sending frame length 96 bits
+B     230.83: ChannelIdle
+A     240.83: FrameArrival 
+            : Timer 1:  Stopped
+            : Arrivals enabled
+A     240.83: New Packet Arrival
+            : Packet A6 Arrival time:     240.83 Length 512 bytes
+            : Arrivals disabled
+A      327.5: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 3: Started. Delay:      250.00 Expires at:       577.5
+B      337.5: FrameArrival 
+            : Packet received by network layer
+            :  Contents: Packet A3 Arrival time:       0.00 Length 512 bytes
+            : Sending frame length 96 bits
+B     340.00: ChannelIdle
