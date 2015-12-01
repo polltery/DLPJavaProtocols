@@ -4,186 +4,44 @@ A       0.00: New Packet Arrival
             : Packet A1 Arrival time:       0.00 Length 512 bytes
             : Sending frame length 4192 bits
             : Timer 0: Started. Delay:      250.00 Expires at:      250.00
+B       0.00: New Packet Arrival
+            : Packet B1 Arrival time:       0.00 Length 512 bytes
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:      250.00
 A       0.00: New Packet Arrival
             : Packet A2 Arrival time:       0.00 Length 512 bytes
-A       0.00: New Packet Arrival
-            : Packet A3 Arrival time:       0.00 Length 512 bytes
-A       0.00: New Packet Arrival
-            : Packet A4 Arrival time:       0.00 Length 512 bytes
+            : Arrivals disabled
+B       0.00: New Packet Arrival
+            : Packet B2 Arrival time:       0.00 Length 512 bytes
             : Arrivals disabled
 A     109.17: ChannelIdle
             : Sending frame length 4192 bits
             : Timer 1: Started. Delay:      250.00 Expires at:      359.17
-B     119.17: FrameArrival 
+B     109.17: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 1: Started. Delay:      250.00 Expires at:      359.17
+B     209.17: FrameArrival 
             : Packet received by network layer
             :  Contents: Packet A1 Arrival time:       0.00 Length 512 bytes
-            : Sending frame length 96 bits
-B     121.67: ChannelIdle
-A     131.67: FrameArrival 
-            : Timer 0:  Stopped
-            : Arrivals enabled
-A     131.67: New Packet Arrival
-            : Packet A5 Arrival time:     131.67 Length 512 bytes
-            : Arrivals disabled
 A     218.33: ChannelIdle
+B     218.33: ChannelIdle
+            : Sending frame length 96 bits
+B     220.83: ChannelIdle
+A     250.00: TimeOut (0)
             : Sending frame length 4192 bits
-            : Timer 2: Started. Delay:      250.00 Expires at:      468.33
-B     228.33: FrameArrival 
+            : Timer 0: Started. Delay:      250.00 Expires at:      500.00
+B     250.00: TimeOut (0)
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:      500.00
+B     318.33: FrameArrival 
             : Packet received by network layer
             :  Contents: Packet A2 Arrival time:       0.00 Length 512 bytes
-            : Sending frame length 96 bits
-B     230.83: ChannelIdle
-A     240.83: FrameArrival 
-            : Timer 1:  Stopped
-            : Arrivals enabled
-A     240.83: New Packet Arrival
-            : Packet A6 Arrival time:     240.83 Length 512 bytes
-            : Arrivals disabled
-A      327.5: ChannelIdle
+A     318.33: FrameArrival 
+A     359.17: TimeOut (1)
+B     359.17: TimeOut (1)
+A     359.17: ChannelIdle
             : Sending frame length 4192 bits
-            : Timer 3: Started. Delay:      250.00 Expires at:       577.5
-B      337.5: FrameArrival 
-            : Packet received by network layer
-            :  Contents: Packet A3 Arrival time:       0.00 Length 512 bytes
-            : Sending frame length 96 bits
-B     340.00: ChannelIdle
-A     350.00: FrameArrival 
-            : Timer 2:  Stopped
-            : Arrivals enabled
-A     350.00: New Packet Arrival
-            : Packet A7 Arrival time:     350.00 Length 512 bytes
-            : Arrivals disabled
-A     436.67: ChannelIdle
+            : Timer 0: Started. Delay:      250.00 Expires at:      609.17
+B     359.17: ChannelIdle
             : Sending frame length 4192 bits
-            : Timer 4: Started. Delay:      250.00 Expires at:      686.67
-B     446.67: FrameArrival 
-            : Packet received by network layer
-            :  Contents: Packet A4 Arrival time:       0.00 Length 512 bytes
-            : Sending frame length 96 bits
-B     449.17: ChannelIdle
-A     459.17: FrameArrival 
-            : Timer 3:  Stopped
-            : Arrivals enabled
-A     459.17: New Packet Arrival
-            : Packet A8 Arrival time:     459.17 Length 512 bytes
-            : Arrivals disabled
-A     545.83: ChannelIdle
-            : Sending frame length 4192 bits
-            : Timer 0: Started. Delay:      250.00 Expires at:      795.83
-B     555.83: FrameArrival 
-            : Packet received by network layer
-            :  Contents: Packet A5 Arrival time:     131.67 Length 512 bytes
-            : Sending frame length 96 bits
-B     558.33: ChannelIdle
-A     568.33: FrameArrival 
-            : Timer 4:  Stopped
-            : Arrivals enabled
-A     568.33: New Packet Arrival
-            : Packet A9 Arrival time:     568.33 Length 512 bytes
-            : Arrivals disabled
-A     655.00: ChannelIdle
-            : Sending frame length 4192 bits
-            : Timer 1: Started. Delay:      250.00 Expires at:      905.00
-B     665.00: FrameArrival 
-            : Packet received by network layer
-            :  Contents: Packet A6 Arrival time:     240.83 Length 512 bytes
-            : Sending frame length 96 bits
-B      667.5: ChannelIdle
-A      677.5: FrameArrival 
-            : Timer 0:  Stopped
-            : Arrivals enabled
-A      677.5: New Packet Arrival
-            : Packet A10 Arrival time:      677.5 Length 512 bytes
-            : Arrivals disabled
-A     764.17: ChannelIdle
-            : Sending frame length 4192 bits
-            : Timer 2: Started. Delay:      250.00 Expires at:     1014.17
-B     774.17: FrameArrival 
-            : Packet received by network layer
-            :  Contents: Packet A7 Arrival time:     350.00 Length 512 bytes
-            : Sending frame length 96 bits
-B     776.67: ChannelIdle
-A     786.67: FrameArrival 
-            : Timer 1:  Stopped
-            : Arrivals enabled
-A     786.67: New Packet Arrival
-            : Packet A11 Arrival time:     786.67 Length 512 bytes
-            : Arrivals disabled
-A     873.33: ChannelIdle
-            : Sending frame length 4192 bits
-            : Timer 3: Started. Delay:      250.00 Expires at:     1123.33
-B     883.33: FrameArrival 
-            : Packet received by network layer
-            :  Contents: Packet A8 Arrival time:     459.17 Length 512 bytes
-            : Sending frame length 96 bits
-B     885.83: ChannelIdle
-A     895.83: FrameArrival 
-            : Timer 2:  Stopped
-            : Arrivals enabled
-A     895.83: New Packet Arrival
-            : Packet A12 Arrival time:     895.83 Length 512 bytes
-            : Arrivals disabled
-A      982.5: ChannelIdle
-            : Sending frame length 4192 bits
-            : Timer 4: Started. Delay:      250.00 Expires at:      1232.5
-B      992.5: FrameArrival 
-            : Packet received by network layer
-            :  Contents: Packet A9 Arrival time:     568.33 Length 512 bytes
-            : Sending frame length 96 bits
-B     995.00: ChannelIdle
-A    1005.00: FrameArrival 
-            : Timer 3:  Stopped
-            : Arrivals enabled
-A    1005.00: New Packet Arrival
-            : Packet A13 Arrival time:    1005.00 Length 512 bytes
-            : Arrivals disabled
-A    1091.67: ChannelIdle
-            : Sending frame length 4192 bits
-            : Timer 0: Started. Delay:      250.00 Expires at:     1341.67
-B    1101.67: FrameArrival 
-            : Packet received by network layer
-            :  Contents: Packet A10 Arrival time:      677.5 Length 512 bytes
-            : Sending frame length 96 bits
-B    1104.17: ChannelIdle
-A    1114.17: FrameArrival 
-            : Timer 4:  Stopped
-            : Arrivals enabled
-A    1114.17: New Packet Arrival
-            : Packet A14 Arrival time:    1114.17 Length 512 bytes
-            : Arrivals disabled
-A    1200.83: ChannelIdle
-            : Sending frame length 4192 bits
-            : Timer 1: Started. Delay:      250.00 Expires at:     1450.83
-B    1210.83: FrameArrival 
-            : Packet received by network layer
-            :  Contents: Packet A11 Arrival time:     786.67 Length 512 bytes
-            : Sending frame length 96 bits
-B    1213.33: ChannelIdle
-A    1223.33: FrameArrival 
-            : Timer 0:  Stopped
-            : Arrivals enabled
-A    1223.33: New Packet Arrival
-            : Packet A15 Arrival time:    1223.33 Length 512 bytes
-            : Arrivals disabled
-A    1310.00: ChannelIdle
-            : Sending frame length 4192 bits
-            : Timer 2: Started. Delay:      250.00 Expires at:     1560.00
-B    1320.00: FrameArrival 
-            : Packet received by network layer
-            :  Contents: Packet A12 Arrival time:     895.83 Length 512 bytes
-            : Sending frame length 96 bits
-B     1322.5: ChannelIdle
-A     1332.5: FrameArrival 
-            : Timer 1:  Stopped
-            : Arrivals enabled
-A     1332.5: New Packet Arrival
-            : Packet A16 Arrival time:     1332.5 Length 512 bytes
-            : Arrivals disabled
-A    1419.17: ChannelIdle
-            : Sending frame length 4192 bits
-            : Timer 3: Started. Delay:      250.00 Expires at:     1669.17
-B    1429.17: FrameArrival 
-            : Packet received by network layer
-            :  Contents: Packet A13 Arrival time:    1005.00 Length 512 bytes
-            : Sending frame length 96 bits
-B    1431.67: ChannelIdle
+            : Timer 0: Started. Delay:      250.00 Expires at:      609.17

@@ -4,46 +4,583 @@ A       0.00: New Packet Arrival
             : Packet A1 Arrival time:       0.00 Length 512 bytes
             : Sending frame length 4192 bits
             : Timer 0: Started. Delay:      250.00 Expires at:      250.00
+B       0.00: New Packet Arrival
+            : Packet B1 Arrival time:       0.00 Length 512 bytes
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:      250.00
 A       0.00: New Packet Arrival
             : Packet A2 Arrival time:       0.00 Length 512 bytes
+B       0.00: New Packet Arrival
+            : Packet B2 Arrival time:       0.00 Length 512 bytes
 A       0.00: New Packet Arrival
             : Packet A3 Arrival time:       0.00 Length 512 bytes
+B       0.00: New Packet Arrival
+            : Packet B3 Arrival time:       0.00 Length 512 bytes
 A       0.00: New Packet Arrival
             : Packet A4 Arrival time:       0.00 Length 512 bytes
+            : Arrivals disabled
+B       0.00: New Packet Arrival
+            : Packet B4 Arrival time:       0.00 Length 512 bytes
             : Arrivals disabled
 A     109.17: ChannelIdle
             : Sending frame length 4192 bits
             : Timer 1: Started. Delay:      250.00 Expires at:      359.17
-B     119.17: FrameArrival 
+B     109.17: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 1: Started. Delay:      250.00 Expires at:      359.17
+B     111.17: FrameArrival 
             : Packet received by network layer
             :  Contents: Packet A1 Arrival time:       0.00 Length 512 bytes
-            : Sending frame length 96 bits
-B     121.67: ChannelIdle
-A     131.67: FrameArrival 
-            : Timer 0:  Stopped
-            : Arrivals enabled
-A     131.67: New Packet Arrival
-            : Packet A5 Arrival time:     131.67 Length 512 bytes
-            : Arrivals disabled
+A     111.17: FrameArrival 
+            : Packet received by network layer
+            :  Contents: Packet B1 Arrival time:       0.00 Length 512 bytes
 A     218.33: ChannelIdle
             : Sending frame length 4192 bits
             : Timer 2: Started. Delay:      250.00 Expires at:      468.33
-B     228.33: FrameArrival 
+B     218.33: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 2: Started. Delay:      250.00 Expires at:      468.33
+B     220.33: FrameArrival 
             : Packet received by network layer
             :  Contents: Packet A2 Arrival time:       0.00 Length 512 bytes
-            : Sending frame length 96 bits
-B     230.83: ChannelIdle
-A     240.83: FrameArrival 
-            : Timer 1:  Stopped
-            : Arrivals enabled
-A     240.83: New Packet Arrival
-            : Packet A6 Arrival time:     240.83 Length 512 bytes
-            : Arrivals disabled
+A     220.33: FrameArrival 
+            : Packet received by network layer
+            :  Contents: Packet B2 Arrival time:       0.00 Length 512 bytes
+A     250.00: TimeOut (0)
+B     250.00: TimeOut (0)
 A      327.5: ChannelIdle
             : Sending frame length 4192 bits
-            : Timer 3: Started. Delay:      250.00 Expires at:       577.5
-B      337.5: FrameArrival 
+            : Timer 0: Started. Delay:      250.00 Expires at:       577.5
+B      327.5: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:       577.5
+B      329.5: FrameArrival 
             : Packet received by network layer
             :  Contents: Packet A3 Arrival time:       0.00 Length 512 bytes
-            : Sending frame length 96 bits
-B     340.00: ChannelIdle
+A      329.5: FrameArrival 
+            : Packet received by network layer
+            :  Contents: Packet B3 Arrival time:       0.00 Length 512 bytes
+A     359.17: TimeOut (1)
+B     359.17: TimeOut (1)
+A     436.67: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:      686.67
+B     436.67: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:      686.67
+B     438.67: FrameArrival 
+A     438.67: FrameArrival 
+A     468.33: TimeOut (2)
+B     468.33: TimeOut (2)
+A     545.83: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:      795.83
+B     545.83: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:      795.83
+B     547.83: FrameArrival 
+A     547.83: FrameArrival 
+A     655.00: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 1: Started. Delay:      250.00 Expires at:      905.00
+B     655.00: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 1: Started. Delay:      250.00 Expires at:      905.00
+B     657.00: FrameArrival 
+A     657.00: FrameArrival 
+A     764.17: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 2: Started. Delay:      250.00 Expires at:     1014.17
+B     764.17: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 2: Started. Delay:      250.00 Expires at:     1014.17
+B     766.17: FrameArrival 
+A     766.17: FrameArrival 
+A     795.83: TimeOut (0)
+B     795.83: TimeOut (0)
+A     873.33: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     1123.33
+B     873.33: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     1123.33
+B     875.33: FrameArrival 
+A     875.33: FrameArrival 
+A     905.00: TimeOut (1)
+B     905.00: TimeOut (1)
+A      982.5: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:      1232.5
+B      982.5: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:      1232.5
+B      984.5: FrameArrival 
+A      984.5: FrameArrival 
+A    1014.17: TimeOut (2)
+B    1014.17: TimeOut (2)
+A    1091.67: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     1341.67
+B    1091.67: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     1341.67
+B    1093.67: FrameArrival 
+A    1093.67: FrameArrival 
+A    1200.83: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 1: Started. Delay:      250.00 Expires at:     1450.83
+B    1200.83: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 1: Started. Delay:      250.00 Expires at:     1450.83
+B    1202.83: FrameArrival 
+A    1202.83: FrameArrival 
+A    1310.00: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 2: Started. Delay:      250.00 Expires at:     1560.00
+B    1310.00: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 2: Started. Delay:      250.00 Expires at:     1560.00
+B    1312.00: FrameArrival 
+A    1312.00: FrameArrival 
+A    1341.67: TimeOut (0)
+B    1341.67: TimeOut (0)
+A    1419.17: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     1669.17
+B    1419.17: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     1669.17
+B    1421.17: FrameArrival 
+A    1421.17: FrameArrival 
+A    1450.83: TimeOut (1)
+B    1450.83: TimeOut (1)
+A    1528.33: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     1778.33
+B    1528.33: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     1778.33
+B    1530.33: FrameArrival 
+A    1530.33: FrameArrival 
+A    1560.00: TimeOut (2)
+B    1560.00: TimeOut (2)
+A     1637.5: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:      1887.5
+B     1637.5: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:      1887.5
+B     1639.5: FrameArrival 
+A     1639.5: FrameArrival 
+A    1746.67: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 1: Started. Delay:      250.00 Expires at:     1996.67
+B    1746.67: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 1: Started. Delay:      250.00 Expires at:     1996.67
+B    1748.67: FrameArrival 
+A    1748.67: FrameArrival 
+A    1855.83: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 2: Started. Delay:      250.00 Expires at:     2105.83
+B    1855.83: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 2: Started. Delay:      250.00 Expires at:     2105.83
+B    1857.83: FrameArrival 
+A    1857.83: FrameArrival 
+A     1887.5: TimeOut (0)
+B     1887.5: TimeOut (0)
+A    1965.00: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     2215.00
+B    1965.00: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     2215.00
+B    1967.00: FrameArrival 
+A    1967.00: FrameArrival 
+A    1996.67: TimeOut (1)
+B    1996.67: TimeOut (1)
+A    2074.17: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     2324.17
+B    2074.17: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     2324.17
+B    2076.17: FrameArrival 
+A    2076.17: FrameArrival 
+A    2105.83: TimeOut (2)
+B    2105.83: TimeOut (2)
+A    2183.33: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     2433.33
+B    2183.33: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     2433.33
+B    2185.33: FrameArrival 
+A    2185.33: FrameArrival 
+A     2292.5: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 1: Started. Delay:      250.00 Expires at:      2542.5
+B     2292.5: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 1: Started. Delay:      250.00 Expires at:      2542.5
+B     2294.5: FrameArrival 
+A     2294.5: FrameArrival 
+A    2401.67: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 2: Started. Delay:      250.00 Expires at:     2651.67
+B    2401.67: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 2: Started. Delay:      250.00 Expires at:     2651.67
+B    2403.67: FrameArrival 
+A    2403.67: FrameArrival 
+A    2433.33: TimeOut (0)
+B    2433.33: TimeOut (0)
+A    2510.83: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     2760.83
+B    2510.83: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     2760.83
+B    2512.83: FrameArrival 
+A    2512.83: FrameArrival 
+A     2542.5: TimeOut (1)
+B     2542.5: TimeOut (1)
+A    2620.00: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     2870.00
+B    2620.00: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     2870.00
+B    2622.00: FrameArrival 
+A    2622.00: FrameArrival 
+A    2651.67: TimeOut (2)
+B    2651.67: TimeOut (2)
+A    2729.17: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     2979.17
+B    2729.17: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     2979.17
+B    2731.17: FrameArrival 
+A    2731.17: FrameArrival 
+A    2838.33: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 1: Started. Delay:      250.00 Expires at:     3088.33
+B    2838.33: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 1: Started. Delay:      250.00 Expires at:     3088.33
+B    2840.33: FrameArrival 
+A    2840.33: FrameArrival 
+A     2947.5: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 2: Started. Delay:      250.00 Expires at:      3197.5
+B     2947.5: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 2: Started. Delay:      250.00 Expires at:      3197.5
+B     2949.5: FrameArrival 
+A     2949.5: FrameArrival 
+A    2979.17: TimeOut (0)
+B    2979.17: TimeOut (0)
+A    3056.67: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     3306.67
+B    3056.67: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     3306.67
+B    3058.67: FrameArrival 
+A    3058.67: FrameArrival 
+A    3088.33: TimeOut (1)
+B    3088.33: TimeOut (1)
+A    3165.83: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     3415.83
+B    3165.83: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     3415.83
+B    3167.83: FrameArrival 
+A    3167.83: FrameArrival 
+A     3197.5: TimeOut (2)
+B     3197.5: TimeOut (2)
+A    3275.00: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     3525.00
+B    3275.00: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     3525.00
+B    3277.00: FrameArrival 
+A    3277.00: FrameArrival 
+A    3384.17: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 1: Started. Delay:      250.00 Expires at:     3634.17
+B    3384.17: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 1: Started. Delay:      250.00 Expires at:     3634.17
+B    3386.17: FrameArrival 
+A    3386.17: FrameArrival 
+A    3493.33: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 2: Started. Delay:      250.00 Expires at:     3743.33
+B    3493.33: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 2: Started. Delay:      250.00 Expires at:     3743.33
+B    3495.33: FrameArrival 
+A    3495.33: FrameArrival 
+A    3525.00: TimeOut (0)
+B    3525.00: TimeOut (0)
+A     3602.5: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:      3852.5
+B     3602.5: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:      3852.5
+B     3604.5: FrameArrival 
+A     3604.5: FrameArrival 
+A    3634.17: TimeOut (1)
+B    3634.17: TimeOut (1)
+A    3711.67: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     3961.67
+B    3711.67: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     3961.67
+B    3713.67: FrameArrival 
+A    3713.67: FrameArrival 
+A    3743.33: TimeOut (2)
+B    3743.33: TimeOut (2)
+A    3820.83: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     4070.83
+B    3820.83: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     4070.83
+B    3822.83: FrameArrival 
+A    3822.83: FrameArrival 
+A    3930.00: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 1: Started. Delay:      250.00 Expires at:     4180.00
+B    3930.00: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 1: Started. Delay:      250.00 Expires at:     4180.00
+B    3932.00: FrameArrival 
+A    3932.00: FrameArrival 
+A    4039.17: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 2: Started. Delay:      250.00 Expires at:     4289.17
+B    4039.17: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 2: Started. Delay:      250.00 Expires at:     4289.17
+B    4041.17: FrameArrival 
+A    4041.17: FrameArrival 
+A    4070.83: TimeOut (0)
+B    4070.83: TimeOut (0)
+A    4148.33: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     4398.33
+B    4148.33: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     4398.33
+B    4150.33: FrameArrival 
+A    4150.33: FrameArrival 
+A    4180.00: TimeOut (1)
+B    4180.00: TimeOut (1)
+A     4257.5: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:      4507.5
+B     4257.5: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:      4507.5
+B     4259.5: FrameArrival 
+A     4259.5: FrameArrival 
+A    4289.17: TimeOut (2)
+B    4289.17: TimeOut (2)
+A    4366.67: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     4616.67
+B    4366.67: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     4616.67
+B    4368.67: FrameArrival 
+A    4368.67: FrameArrival 
+A    4475.83: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 1: Started. Delay:      250.00 Expires at:     4725.83
+B    4475.83: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 1: Started. Delay:      250.00 Expires at:     4725.83
+B    4477.83: FrameArrival 
+A    4477.83: FrameArrival 
+A    4585.00: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 2: Started. Delay:      250.00 Expires at:     4835.00
+B    4585.00: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 2: Started. Delay:      250.00 Expires at:     4835.00
+B    4587.00: FrameArrival 
+A    4587.00: FrameArrival 
+A    4616.67: TimeOut (0)
+B    4616.67: TimeOut (0)
+A    4694.17: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     4944.17
+B    4694.17: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     4944.17
+B    4696.17: FrameArrival 
+A    4696.17: FrameArrival 
+A    4725.83: TimeOut (1)
+B    4725.83: TimeOut (1)
+A    4803.33: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     5053.33
+B    4803.33: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     5053.33
+B    4805.33: FrameArrival 
+A    4805.33: FrameArrival 
+A    4835.00: TimeOut (2)
+B    4835.00: TimeOut (2)
+A     4912.5: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:      5162.5
+B     4912.5: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:      5162.5
+B     4914.5: FrameArrival 
+A     4914.5: FrameArrival 
+A    5021.67: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 1: Started. Delay:      250.00 Expires at:     5271.67
+B    5021.67: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 1: Started. Delay:      250.00 Expires at:     5271.67
+B    5023.67: FrameArrival 
+A    5023.67: FrameArrival 
+A    5130.83: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 2: Started. Delay:      250.00 Expires at:     5380.83
+B    5130.83: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 2: Started. Delay:      250.00 Expires at:     5380.83
+B    5132.83: FrameArrival 
+A    5132.83: FrameArrival 
+A     5162.5: TimeOut (0)
+B     5162.5: TimeOut (0)
+A    5240.00: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     5490.00
+B    5240.00: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     5490.00
+B    5242.00: FrameArrival 
+A    5242.00: FrameArrival 
+A    5271.67: TimeOut (1)
+B    5271.67: TimeOut (1)
+A    5349.17: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     5599.17
+B    5349.17: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     5599.17
+B    5351.17: FrameArrival 
+A    5351.17: FrameArrival 
+A    5380.83: TimeOut (2)
+B    5380.83: TimeOut (2)
+A    5458.33: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     5708.33
+B    5458.33: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     5708.33
+B    5460.33: FrameArrival 
+A    5460.33: FrameArrival 
+A     5567.5: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 1: Started. Delay:      250.00 Expires at:      5817.5
+B     5567.5: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 1: Started. Delay:      250.00 Expires at:      5817.5
+B     5569.5: FrameArrival 
+A     5569.5: FrameArrival 
+A    5676.67: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 2: Started. Delay:      250.00 Expires at:     5926.67
+B    5676.67: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 2: Started. Delay:      250.00 Expires at:     5926.67
+B    5678.67: FrameArrival 
+A    5678.67: FrameArrival 
+A    5708.33: TimeOut (0)
+B    5708.33: TimeOut (0)
+A    5785.83: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     6035.83
+B    5785.83: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     6035.83
+B    5787.83: FrameArrival 
+A    5787.83: FrameArrival 
+A     5817.5: TimeOut (1)
+B     5817.5: TimeOut (1)
+A    5895.00: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     6145.00
+B    5895.00: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     6145.00
+B    5897.00: FrameArrival 
+A    5897.00: FrameArrival 
+A    5926.67: TimeOut (2)
+B    5926.67: TimeOut (2)
+A    6004.17: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     6254.17
+B    6004.17: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     6254.17
+B    6006.17: FrameArrival 
+A    6006.17: FrameArrival 
+A    6113.33: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 1: Started. Delay:      250.00 Expires at:     6363.33
+B    6113.33: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 1: Started. Delay:      250.00 Expires at:     6363.33
+B    6115.33: FrameArrival 
+A    6115.33: FrameArrival 
+A     6222.5: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 2: Started. Delay:      250.00 Expires at:      6472.5
+B     6222.5: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 2: Started. Delay:      250.00 Expires at:      6472.5
+B     6224.5: FrameArrival 
+A     6224.5: FrameArrival 
+A    6254.17: TimeOut (0)
+B    6254.17: TimeOut (0)
+A    6331.67: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     6581.67
+B    6331.67: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     6581.67
+B    6333.67: FrameArrival 
+A    6333.67: FrameArrival 
+A    6363.33: TimeOut (1)
+B    6363.33: TimeOut (1)
+A    6440.83: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     6690.83
+B    6440.83: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     6690.83
+B    6442.83: FrameArrival 
+A    6442.83: FrameArrival 
+A     6472.5: TimeOut (2)
+B     6472.5: TimeOut (2)
+A    6550.00: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:      250.00 Expires at:     6800.00
+B    6550.00: ChannelIdle
+            : Sending frame length 4192 bits
+            : Timer 0: Started. Delay:     

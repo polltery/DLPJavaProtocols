@@ -1,10 +1,11 @@
-import datalink.*;
+import datalink.Packet;
+import datalink.Protocol;
 
 /*
   A go-back n type sliding window protocol
   */
 
-public class GoBackN extends Protocol
+public class GoBackNWEA3 extends Protocol
 {
     int nextBufferToSend;        // buffer to be sent when channel is idle
     int firstFreeBufferIndex;    // buffer to getin which to store next packet
@@ -16,8 +17,11 @@ public class GoBackN extends Protocol
 
     Packet[] buffer;
     double timer;
-
-    public GoBackN(int windowSize, double timer)
+    
+    boolean ackInQueue;			// is there any Acknowledgement waiting to be sent?
+    boolean channelBusy;		// Is the channel busy? true when channel gets busy by calling channel idle method
+    
+    public GoBackNWEA3(int windowSize, double timer)
     {
 	super( windowSize, timer);
 	numberOfPacketsStored = 0;
@@ -29,6 +33,8 @@ public class GoBackN extends Protocol
 	this.windowSize = windowSize;
 	this.timer = timer;
 	buffer = new Packet[windowSize+1];
+    ackInQueue = false;
+    channelBusy = false;
     }
 
     public void FrameArrival( Object frame)
@@ -42,11 +48,20 @@ public class GoBackN extends Protocol
 		sendPacket(f.info); /* valid frame, so send it */
 	 	                    /* to the network layer */
 		nextSequenceNumberExpected = inc( nextSequenceNumberExpected);
+		
+		// Send an ack when we recieve correct packet
+		if(isChannelIdle()){
+			int a = (nextSequenceNumberExpected+maximumSequenceNumber)
+				    % (maximumSequenceNumber+1);
+			sendAckFrame(new DLL_Frame(-1,a));
+		}else{
+			// put the ack in a queue (Check channelIdle() method)
+			ackInQueue = true;
+		}
+	    
 	    }
 	/* if frame n is ACKed then that implies n-1,n-2 etc have also been */
 	/* ACKed, so stop associated timers.                                 */
-	//BBa : Echo 
-			System.out.println(firstUnAcknowledged+"<="+f.acknowledgment+"<"+nextBufferToSend);
 			
 	while ( between( firstUnAcknowledged,
 			 f.acknowledgment,
@@ -86,20 +101,29 @@ public class GoBackN extends Protocol
 		transmit_frame( nextBufferToSend);
 		nextBufferToSend = inc( nextBufferToSend);
 	    }
-	System.out.println(nextBufferToSend+" NBTS");
     }
 
     public void CheckSumError()
     {
+    	// TODO add negative acknowledgement
     }
 
     public void ChannelIdle()
     {
+    channelBusy = false;
 	if ( nextBufferToSend != firstFreeBufferIndex )
 	    {
 		transmit_frame( nextBufferToSend);
 		nextBufferToSend = inc( nextBufferToSend);
+	    channelBusy = true;
 	    }
+	// send any acks that are in queue while the channel is not busy
+	if (ackInQueue == true && channelBusy == false){
+		int a = (nextSequenceNumberExpected+maximumSequenceNumber)
+			    % (maximumSequenceNumber+1);
+		sendAckFrame(new DLL_Frame(-1,a));
+		ackInQueue = false;
+	}
     }
 
     private boolean between( int a, int b, int c)
@@ -121,6 +145,11 @@ public class GoBackN extends Protocol
 
     private void transmit_frame( int sequenceNumber)
     {
+    
+    // we won't need the ack in queue since it will be piggybacked
+    if(ackInQueue)
+    	ackInQueue = false;
+    	
 	int acknowledgement;
 	/* piggyback acknowledge of last frame receieved */
 	acknowledgement = (nextSequenceNumberExpected+maximumSequenceNumber)
@@ -131,24 +160,4 @@ public class GoBackN extends Protocol
 				 buffer[sequenceNumber]));
 	startTimer( sequenceNumber, timer);
     }
-}
-
-
-class DLL_Frame {
-    public datalink.Packet info;
-    int sequence;
-    int acknowledgment;
-    
-    DLL_Frame(int s, int a){
-    	sequence = s;
-    	acknowledgment = a;
-    }
-    
-    DLL_Frame ( int s, int a, datalink.Packet p)
-    {
-	info = p;
-	sequence = s;
-	acknowledgment = a;
-    }
-
 }
