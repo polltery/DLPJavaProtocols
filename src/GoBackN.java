@@ -135,7 +135,7 @@ public class GoBackN extends Protocol
 
 
 class DLL_Frame {
-    public datalink.Packet info;
+    Packet info;
     int sequence;
     int acknowledgment;
     
@@ -144,7 +144,7 @@ class DLL_Frame {
     	acknowledgment = a;
     }
     
-    DLL_Frame ( int s, int a, datalink.Packet p)
+    DLL_Frame ( int s, int a, Packet p)
     {
 	info = p;
 	sequence = s;

@@ -1,5 +1,4 @@
-import datalink.Packet;
-import datalink.Protocol;
+import datalink.*;
 
 /*
   A go-back n type sliding window protocol
@@ -19,8 +18,7 @@ public class GoBackNWEA3 extends Protocol
     double timer;
     
     boolean ackInQueue;			// is there any Acknowledgement waiting to be sent?
-    boolean channelBusy;		// Is the channel busy? true when channel gets busy by calling channel idle method
-    
+
     public GoBackNWEA3(int windowSize, double timer)
     {
 	super( windowSize, timer);
@@ -34,7 +32,7 @@ public class GoBackNWEA3 extends Protocol
 	this.timer = timer;
 	buffer = new Packet[windowSize+1];
     ackInQueue = false;
-    channelBusy = false;
+    
     }
 
     public void FrameArrival( Object frame)
@@ -51,9 +49,7 @@ public class GoBackNWEA3 extends Protocol
 		
 		// Send an ack when we recieve correct packet
 		if(isChannelIdle()){
-			int a = (nextSequenceNumberExpected+maximumSequenceNumber)
-				    % (maximumSequenceNumber+1);
-			sendAckFrame(new DLL_Frame(-1,a));
+			transmit_ackFrame();
 		}else{
 			// put the ack in a queue (Check channelIdle() method)
 			ackInQueue = true;
@@ -110,18 +106,15 @@ public class GoBackNWEA3 extends Protocol
 
     public void ChannelIdle()
     {
-    channelBusy = false;
+
 	if ( nextBufferToSend != firstFreeBufferIndex )
 	    {
 		transmit_frame( nextBufferToSend);
 		nextBufferToSend = inc( nextBufferToSend);
-	    channelBusy = true;
 	    }
 	// send any acks that are in queue while the channel is not busy
-	if (ackInQueue == true && channelBusy == false){
-		int a = (nextSequenceNumberExpected+maximumSequenceNumber)
-			    % (maximumSequenceNumber+1);
-		sendAckFrame(new DLL_Frame(-1,a));
+	if (ackInQueue == true){
+		transmit_ackFrame();
 		ackInQueue = false;
 	}
     }
@@ -142,7 +135,13 @@ public class GoBackNWEA3 extends Protocol
 	a %= maximumSequenceNumber+1;
 	return a;
     }
-
+    
+    // Transmiting the explicit acknowledgment value, -1 for sequence number, because sequence number doesn't matter
+    private void transmit_ackFrame(){
+    	int a = (nextSequenceNumberExpected+maximumSequenceNumber) % (maximumSequenceNumber+1);
+		sendAckFrame(new DLL_Frame(-1,a));
+    }
+    
     private void transmit_frame( int sequenceNumber)
     {
     
