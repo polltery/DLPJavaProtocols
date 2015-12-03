@@ -45,9 +45,7 @@ public class GoBackN extends Protocol
 	    }
 	/* if frame n is ACKed then that implies n-1,n-2 etc have also been */
 	/* ACKed, so stop associated timers.                                 */
-	//BBa : Echo 
-			System.out.println(firstUnAcknowledged+"<="+f.acknowledgment+"<"+nextBufferToSend);
-			
+
 	while ( between( firstUnAcknowledged,
 			 f.acknowledgment,
 			 nextBufferToSend) )
@@ -86,7 +84,6 @@ public class GoBackN extends Protocol
 		transmit_frame( nextBufferToSend);
 		nextBufferToSend = inc( nextBufferToSend);
 	    }
-	System.out.println(nextBufferToSend+" NBTS");
     }
 
     public void CheckSumError()
@@ -131,24 +128,4 @@ public class GoBackN extends Protocol
 				 buffer[sequenceNumber]));
 	startTimer( sequenceNumber, timer);
     }
-}
-
-
-class DLL_Frame {
-    Packet info;
-    int sequence;
-    int acknowledgment;
-    
-    DLL_Frame(int s, int a){
-    	sequence = s;
-    	acknowledgment = a;
-    }
-    
-    DLL_Frame ( int s, int a, Packet p)
-    {
-	info = p;
-	sequence = s;
-	acknowledgment = a;
-    }
-
 }

@@ -1,0 +1,11 @@
+%
+% sample data showing effect of unbalanced traffic
+% 6 un-balanced traffic
+%
+channel-capacity = 38400
+packet-length-distribution-a = Constant
+packet-length-distribution-b = Constant
+window-size = 4
+mean-interarrival-time-a = 0.0
+mean-interarrival-time-b = 5000.0
+simulation-time = 100000.000000

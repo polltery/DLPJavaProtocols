@@ -1,0 +1,16 @@
+%
+% sample data showing effect of Window size
+% checksum errors 20%
+% random lengths
+% 1 balanced traffic
+%
+propagation-delay = 100
+channel-capacity = 38400
+checksum-error-probability = 0.20
+packet-length-distribution-a = Exponential
+packet-length-distribution-b = Exponential
+mean-packet-length-b = 195
+window-size = 28
+mean-interarrival-time-a = 0.0
+mean-interarrival-time-b = 0.0
+simulation-time = 100000.000000

@@ -4,7 +4,7 @@ import datalink.*;
   A go-back n type sliding window protocol
   */
 
-public class GoBackNWEA3 extends Protocol
+public class Improved_GoBackN_WithNacks extends Protocol
 {
     int nextBufferToSend;        // buffer to be sent when channel is idle
     int firstFreeBufferIndex;    // buffer to getin which to store next packet
@@ -19,7 +19,7 @@ public class GoBackNWEA3 extends Protocol
     
     boolean ackInQueue;			// is there any Acknowledgement waiting to be sent?
 
-    public GoBackNWEA3(int windowSize, double timer)
+    public Improved_GoBackN_WithNacks(int windowSize, double timer)
     {
 	super( windowSize, timer);
 	numberOfPacketsStored = 0;
@@ -32,7 +32,6 @@ public class GoBackNWEA3 extends Protocol
 	this.timer = timer;
 	buffer = new Packet[windowSize+1];
     ackInQueue = false;
-    
     }
 
     public void FrameArrival( Object frame)
@@ -54,11 +53,21 @@ public class GoBackNWEA3 extends Protocol
 			// put the ack in a queue (Check channelIdle() method)
 			ackInQueue = true;
 		}
-	    
+		
 	    }
+	
+	
 	/* if frame n is ACKed then that implies n-1,n-2 etc have also been */
 	/* ACKed, so stop associated timers.                                 */
-			
+	// checking if explicit nack
+	if(f.acknowledgment < 0){
+		nextBufferToSend = firstUnAcknowledged;
+		if ( isChannelIdle() )
+	    {
+		transmit_frame( nextBufferToSend);
+		nextBufferToSend = inc( nextBufferToSend);
+	    }
+	}else{
 	while ( between( firstUnAcknowledged,
 			 f.acknowledgment,
 			 nextBufferToSend) )
@@ -68,6 +77,7 @@ public class GoBackNWEA3 extends Protocol
 		stopTimer(firstUnAcknowledged);
 		firstUnAcknowledged = inc( firstUnAcknowledged);
 	    }
+	}
  	if ( numberOfPacketsStored < windowSize )
 	    enableNetworkLayer();
  	
@@ -102,6 +112,9 @@ public class GoBackNWEA3 extends Protocol
     public void CheckSumError()
     {
     	// TODO add negative acknowledgement
+    	if(isChannelIdle()){
+    		sendNackFrame(new DLL_Frame(-1,-1));
+    	}
     }
 
     public void ChannelIdle()
@@ -159,4 +172,24 @@ public class GoBackNWEA3 extends Protocol
 				 buffer[sequenceNumber]));
 	startTimer( sequenceNumber, timer);
     }
+}
+
+
+class DLL_Frame {
+    Packet info;
+    int sequence;
+    int acknowledgment;
+    
+    DLL_Frame(int s, int a){
+    	sequence = s;
+    	acknowledgment = a;
+    }
+    
+    DLL_Frame ( int s, int a, Packet p)
+    {
+	info = p;
+	sequence = s;
+	acknowledgment = a;
+    }
+
 }
